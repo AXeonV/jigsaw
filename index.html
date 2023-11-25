@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Puzzle</title>
+	<script src="vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="app">
+		<img :src="imgUrl" ref="image" :class="[success ? 'finish' : 'init']" v-show="!showDebris">
+		<div class="container">
+			<div class="debris"
+			v-for="(item, index) in num"
+			:key="index"
+			ref="debris"
+			v-show="showDebris"
+			:style="{backgroundImage: 'url(' + imgUrl + ')'}" 
+			@mousedown="move" 
+			@touchstart="move"
+			></div>
+		</div>
+	</div>
+	<script type="text/javascript", src="script.js"></script>
+</body>
+</html>
