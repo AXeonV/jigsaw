@@ -1,2 +1,2 @@
 # puzzle
-an H5-vue puzzle
+a simple H5 puzzle with vue.js for CoCoJ
