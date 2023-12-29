@@ -16,8 +16,8 @@ var X = new Vue({
 		this.browserW = document.documentElement.clientWidth;
 		this.browserH = document.documentElement.clientHeight;
 		let image = this.$refs.image;
-		this.imgUrl = 'img.jpg';
-		image.src = 'img.jpg';
+		this.imgUrl = 'wtw.jpeg';
+		image.src = 'wtw.jpeg';
 		setTimeout(() => {
 		this.imgWidth = image.naturalWidth;
 		this.imgHeight = image.naturalHeight;
@@ -90,7 +90,25 @@ var X = new Vue({
 			let arr = this.$refs.debris;
 			image.style.left = arr[0].getBoundingClientRect().left + 'px';
 			image.style.top = arr[0].getBoundingClientRect().top + 'px';
-			alert("Good Job!!!");
+			setTimeout(() => {
+			for (let i = 1; i >= 0; i -= 0.00001) {
+				setTimeout(() => {
+					document.getElementsByClassName("finish")[0].style.opacity = i;
+				}, 0);
+			}
+			}, 1000);
+			setTimeout(() => {
+			document.getElementsByClassName("finish")[0].style.transform = "scale(3, 3)";
+			this.imgUrl = 'sxy.jpg';
+			image.src = 'sxy.jpg';
+			image.style.left = 720 + 'px';
+			image.style.top = 360 + 'px';
+			for (let i = 0; i <= 1; i += 0.00001) {
+				setTimeout(() => {
+					document.getElementsByClassName("finish")[0].style.opacity = i;
+				}, 0);
+			}
+			}, 2000);
 		}
 	},
 	judgePosition(i, j, index) {

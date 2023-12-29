@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body {
-/*	background-color: #ccc;*/
+	background-color: #aaa;
 }
 .init {
 	position: fixed;
@@ -13,7 +13,7 @@ body {
 }
 .finish {
 	position: absolute;
-	transform: scale(1.1, 1.1);
+	transform: scale(1.2, 1.2);
 }
 .debris {
 	position: absolute;
